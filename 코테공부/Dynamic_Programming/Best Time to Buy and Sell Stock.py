@@ -8,5 +8,8 @@ class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         buy, ans = float('inf'), 0
         for p in prices:
-            buy, ans = min(buy, p), max(ans, p-buy)
+            #최소가격 찾기
+            buy = min(buy, p)
+            #이전까지의 최대값 vs 현재가격 - 최소가격
+            ans = max(ans, p-buy)
         return ans
