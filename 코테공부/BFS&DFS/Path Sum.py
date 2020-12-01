@@ -10,6 +10,7 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
 class Solution:
     def dfs(self,node,ans,sum):
         #리프노드이고 val의 합이 목표값과 같을때
