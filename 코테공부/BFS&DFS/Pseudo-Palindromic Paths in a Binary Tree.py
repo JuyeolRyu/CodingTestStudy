@@ -19,6 +19,7 @@ class Solution:
             return ans.append(path)
         
         #path를 그냥 인자로 넣어주면 얕은복사가 되므로 path[:]로 넘겨준다
+        #path + [node.val]을 인자로 넘겨주는것도 가능
         if node.left != None:
             self.dfs(node.left,path[:],ans)
         if node.right != None:
